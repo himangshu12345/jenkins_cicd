@@ -1,4 +1,4 @@
-FROM tomcat:9
-ADD hello.html /usr/local/tomcat/webapps
-CMD ["catalina.sh", "run"]
+FROM nginx:latest
+WORKDIR /var/www/html
+ADD hello.html /var/www/html
 EXPOSE 8080
